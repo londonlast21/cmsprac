@@ -54,15 +54,15 @@ router.post('/', (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
-        .then(dbUserData => {
-          req.session.save(() => {
-            req.session.user_id = dbUserData.id;
-            req.session.username = dbUserData.username;
-            req.session.loggedIn = true;
-
-            res.json(dbUserData);
-          });
-    });
+    .then(dbUserData => {
+      req.session.save(() => {
+        req.session.user_id = dbUserData.id;
+        req.session.username = dbUserData.username;
+        req.session.loggedIn = true;
+    
+        res.json(dbUserData);
+      });
+    })
 });
 
 router.post('/login', (req, res) => {
@@ -93,6 +93,12 @@ router.post('/login', (req, res) => {
     });
   });
 });
+
+router.post('/logout', (req, res) => {
+  
+})
+
+
   
 
 router.put('/:id', (req, res) => {
