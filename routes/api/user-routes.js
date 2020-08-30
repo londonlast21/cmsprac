@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const [ User ] = require('../../models');
+const { User } = require('../../models');
 
 router.get('/', (req, res) => {
     User.findAll()
@@ -65,7 +65,7 @@ router.delete('/:id', (req, res) => {
     router.delete('/:id', (req, res) => {
         User.destroy({
             where: {
-                req.params.id
+                id: req.params.id
             }
         }).then(dbUserData => {
             if (!dbUserData) {
