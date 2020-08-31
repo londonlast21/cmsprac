@@ -13,3 +13,6 @@ Run 'npm start' in your CLI to begin
 [GitHub Repo](https://londonlast21.github.io/cmsprac/)
 
 [Heroku App](https://git.heroku.com/thawing-woodland-66055.git)
+
+## CSS:
+uses Bootstrap
