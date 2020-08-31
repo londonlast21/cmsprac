@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, User, Comment } = require('../../models');
 
+
 router.get('/', (req, res) => {
     console.log('===================');
     Post.findAll({
@@ -80,7 +81,7 @@ router.post('/', (req, res) => {
 });
 
 
-router.put('/:id', (req, res) => {
+router.put('/:id',   (req, res) => {
     Post.update(
     {
         title: req.body.title,
